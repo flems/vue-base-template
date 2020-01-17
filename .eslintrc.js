@@ -15,7 +15,8 @@ module.exports = {
     "no-var": 1,
     "linebreak-style": 0,
     "import/prefer-default-export": "off",
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "no-return-await": 1
   },
   parserOptions: {
     parser: 'babel-eslint',

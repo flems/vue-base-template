@@ -1,4 +1,4 @@
-// import httpRequest from '@/utils/http.js';
+import HttpRequest from '@/utils/httpRequest.js';
 
 export default {
   state: {
@@ -12,7 +12,10 @@ export default {
   actions: {
     getData({ commit, rootState }) {
       const url = rootState.options.domain;
-      commit('setData');
+      const http = new HttpRequest();
+      const data = http.getModelList('/ajax/compare-models.php');
+      console.log(data);
+      commit('setData', data);
       return url;
     },
   },
